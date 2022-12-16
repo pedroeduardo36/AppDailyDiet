@@ -12,8 +12,3 @@ export const Text = styled.Text`
     color: #FFFF;
     font-weight: 900;
 `
-
-// flex: 1,
-// backgroundColor: '#fff',
-// alignItems: 'center',
-// justifyContent: 'center',
