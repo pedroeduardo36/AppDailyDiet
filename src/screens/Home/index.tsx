@@ -1,20 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Container, Text } from './styles';
 
 export function Home() {
   return (
-    <View style={styles.container}>
+    <Container>
       <Text>Daily Diet</Text>
-      <StatusBar style="auto" />
-    </View>
+      <StatusBar style='dark'/>
+    </Container>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
