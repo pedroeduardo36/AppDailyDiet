@@ -1,3 +1,4 @@
+import { Button } from "@components/Button";
 import { Header } from "@components/Header";
 import { PercentageCard } from "@components/PercentageCard";
 
@@ -8,6 +9,8 @@ export function Home() {
     <Container>
       <Header />
       <PercentageCard />
+      <Text>Refeições</Text>
+      <Button title="+ Nova refeição"/>
     </Container>
   );
 }
