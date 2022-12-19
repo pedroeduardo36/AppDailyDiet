@@ -10,5 +10,5 @@ export const Container = styled.View`
 export const Text = styled.Text`
     font-size: ${({theme}) => theme.FONT_SIZE.LG}px;
     color: ${({theme}) => theme.COLORS.GRAY_600};
-    font-weight: 900;
+    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
 `
