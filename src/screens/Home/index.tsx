@@ -1,13 +1,17 @@
 import { Button } from "@components/Button";
+import { EmptyList } from "@components/EmptyList";
 import { Header } from "@components/Header";
 import { PercentageCard } from "@components/PercentageCard";
-import { SectionList, StyleSheet, View } from "react-native";
+import { SectionList } from "react-native";
 import {
   Container,
   Text,
   SectionHeader,
   SectionCard,
   CardText,
+  Status,
+  Hour,
+  HourView,
 } from "./styles";
 
 const DATA = [
@@ -35,7 +39,11 @@ type Props = {
 
 const Item = ({ title }: Props) => (
   <SectionCard>
+    <HourView>
+      <Hour>20:00</Hour>
+    </HourView>
     <CardText>{title}</CardText>
+    <Status />
   </SectionCard>
 );
 
@@ -47,13 +55,14 @@ export function Home() {
       <Text>Refeições</Text>
       <Button title="+ Nova refeição" />
       <SectionList
-      style={{width: '100%'}}
+        style={{ width: "100%" }}
         sections={DATA}
         keyExtractor={(item, index) => item + index}
         renderItem={({ item }) => <Item title={item} />}
         renderSectionHeader={({ section: { title } }) => (
           <SectionHeader>{title}</SectionHeader>
         )}
+        ListEmptyComponent={<EmptyList />}
       />
     </Container>
   );
