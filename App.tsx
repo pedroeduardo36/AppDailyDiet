@@ -1,4 +1,5 @@
 import { Home } from "@screens/Home";
+import { NewRef } from "@screens/NewRef";
 import { ThemeProvider } from "styled-components/native";
 import theme from "@theme/index";
 import {
@@ -15,7 +16,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="dark"/>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      {fontsLoaded ? <NewRef /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
