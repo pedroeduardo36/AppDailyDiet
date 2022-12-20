@@ -47,6 +47,7 @@ export function Home() {
       <Text>Refeições</Text>
       <Button title="+ Nova refeição" />
       <SectionList
+      style={{width: '100%'}}
         sections={DATA}
         keyExtractor={(item, index) => item + index}
         renderItem={({ item }) => <Item title={item} />}
