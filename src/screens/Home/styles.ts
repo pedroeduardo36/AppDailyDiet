@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
 import { SectionList } from "react-native";
 
-export const Container = styled.SafeAreaView`
-  width: 80%;
+export const Container = styled.View`
+  width: 100%;
   padding: 32px;
   flex: 1;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
