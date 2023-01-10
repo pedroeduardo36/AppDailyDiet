@@ -11,6 +11,7 @@ import {
 import { ActivityIndicator } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { NewRefFailure } from "@screens/NewRefFailure";
+import { Routes } from "@routes/index";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Nunito_400Regular, Nunito_700Bold });
@@ -18,7 +19,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="dark"/>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      {fontsLoaded ? <Routes /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
