@@ -48,7 +48,9 @@ const Item = ({ title }: Props) => (
   </SectionCard>
 );
 
-export function Home({navigation}) {
+export function Home() {
+
+  const navigation = useNavigation()
 
   function handleNewRef(){
     navigation.navigate('NewRef')
