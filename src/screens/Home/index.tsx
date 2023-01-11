@@ -13,6 +13,7 @@ import {
   Hour,
   HourView,
 } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
   {
@@ -47,13 +48,19 @@ const Item = ({ title }: Props) => (
   </SectionCard>
 );
 
-export function Home() {
+export function Home({navigation}) {
+
+  function handleNewRef(){
+    navigation.navigate('NewRef')
+  }
+
+
   return (
     <Container>
       <Header />
       <PercentageCard />
       <Text>Refeições</Text>
-      <Button title="+ Nova refeição" />
+      <Button onPress={handleNewRef} title="+ Nova refeição" />
       <SectionList
         style={{ width: "100%" }}
         sections={DATA}
