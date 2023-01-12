@@ -1,16 +1,22 @@
-import { BackIcon, Container, Text } from "./styles";
-
+import { useNavigation } from "@react-navigation/native";
+import { BackButton, BackIcon, Container, Text } from "./styles";
 
 type Props = {
-    title: string
-}
+  title: string;
+};
 
-export function TextHeader({title}: Props){
-return (
+export function TextHeader({ title }: Props) {
+    const navigation = useNavigation()
+
+  function handleGoBack() {
+    navigation.goBack('Home')
+  }
+  return (
     <Container>
-        <BackIcon  size={15} color='#333638'/>
-        <Text>{title}</Text>
+      <BackButton onPress={handleGoBack}>
+        <BackIcon size={15} color="#333638" />
+      </BackButton>
+      <Text>{title}</Text>
     </Container>
-)
-
+  );
 }
